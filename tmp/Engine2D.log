@@ -1,0 +1,36 @@
+﻿Build started 2015/07/26 08:17:42 p.m..
+     1>Project "C:\Users\Guido\Documents\Image Campus\Engine2D\src\Engine2D\Engine2D.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\Guido\Documents\Image Campus\Engine2D\src\Engine2D\includes" /I"C:\Users\Guido\Documents\Image Campus\Engine2D\res" /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\\" /Fd"C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Entity2D.cpp Importer.cpp
+         Importer.cpp
+         Unknown compiler version - please run the configure tests and report the results
+         Entity2D.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\\" /LIBPATH:"C:\Users\Guido\Documents\Image Campus\Engine2D\res/tinyxml2/tinyxml2/bin/Win32-Debug-Dll" d3d9.lib winmm.lib d3dx9d.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.lib" /MACHINE:X86 /DLL "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Animation.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Box.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Circle.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\DirectInput.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Entity2D.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Game.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Importer.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Input.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\MathF.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Renderer.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Scene.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Shape.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Sprite.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Texture.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\TileMap.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Timer.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\tinyxml2.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Triangle.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\Window.obj"
+         "C:\Users\Guido\Documents\Image Campus\Engine2D\\tmp\XMLParser.obj"
+            Creating library C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.lib and object C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.exp
+         Engine2D.vcxproj -> C:\Users\Guido\Documents\Image Campus\Engine2D\bin\Debug\Engine2D.dll
+     1>Done Building Project "C:\Users\Guido\Documents\Image Campus\Engine2D\src\Engine2D\Engine2D.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.72
