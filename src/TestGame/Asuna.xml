@@ -46,6 +46,7 @@
 	
 	
 	<INSTANCE Sprite="Asuna" Name="character" POS_X="0" POS_Y="0" ROTATION="0" SCALE_X="100" SCALE_Y="100" LAYER="Character_A"/>
+	<!-- INSTANCE Sprite="Asuna" Name="character4" POS_X="0" POS_Y="0" ROTATION="0" SCALE_X="100" SCALE_Y="100" LAYER="Character_A" -->
 	<INSTANCE Sprite="Asuna" Name="character2" POS_X="150" POS_Y="0" ROTATION="0" SCALE_X="100" SCALE_Y="100" LAYER="Character_B"/>
 	<INSTANCE Sprite="Asuna" Name="character3" POS_X="-150" POS_Y="0" ROTATION="0" SCALE_X="100" SCALE_Y="100" LAYER="Character_C"/>
 	<!--

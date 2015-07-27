@@ -80,6 +80,8 @@ void Importer::ImportSprite(Scene& pkScene, tinyxml2::XMLElement* element){
 		
 				ent_sprite->AddAnimation(*list_animations);
 				pkScene.Add(name, ent_sprite);
+				pkScene.AddCollidersGroup(layer);
+				pkScene.AddEntityToCollidersGroup(ent_sprite, layer);
 			}
 			instance = instance->NextSiblingElement("INSTANCE");
 		}

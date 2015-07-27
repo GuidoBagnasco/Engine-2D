@@ -100,6 +100,7 @@ void Scene::Draw(Renderer* m_renderer){
 
 void Scene::Update(Timer* t){
 	if(m_entitiesMap.size() > 0){
+		CheckCollisions();
 		m_ItEntity = m_entitiesMap.begin();
 		do{
 			m_ItEntity->second->Update(*t);
@@ -153,11 +154,12 @@ bool Scene::RemoveCollidersGroup(std::string name){
 
 void Scene::CheckCollisions(){
 	if(m_pCollidersGroup.size() > 1){
-		for(m_pCollidersGroupsItA = m_pCollidersGroup.begin(); m_pCollidersGroupsItA != m_pCollidersGroup.end(); m_pCollidersGroupsItA){
+		for(m_pCollidersGroupsItA = m_pCollidersGroup.begin(); m_pCollidersGroupsItA != m_pCollidersGroup.end(); m_pCollidersGroupsItA++){
 			m_pEntVectorA = m_pCollidersGroupsItA->second;
 
-			for(m_pCollidersGroupsItB = (++m_pCollidersGroupsItA); m_pCollidersGroupsItB != m_pCollidersGroup.end(); m_pCollidersGroupsItB){
-				
+			for(m_pCollidersGroupsItB = (++m_pCollidersGroupsItA); m_pCollidersGroupsItB != m_pCollidersGroup.end(); m_pCollidersGroupsItB++){
+				m_pEntVectorB = m_pCollidersGroupsItB->second;
+
 				// First vector
 				for(int i = 0; i < m_pEntVectorA->size(); i++){
 					// Saves the entity
@@ -169,13 +171,16 @@ void Scene::CheckCollisions(){
 						m_pEntB = (*m_pEntVectorB)[j];
 
 						// Checks if the two objects are colliding with each other
-						if(m_pEntA->CheckCollision(*m_pEntB)){
+						if(m_pEntA->CheckCollision(*m_pEntB) != Entity2D::NoCollision){
 							m_pEntA->SetPosition(m_pEntA->GetPreviousX(), m_pEntA->GetPreviousY());
 							m_pEntB->SetPosition(m_pEntB->GetPreviousX(), m_pEntB->GetPreviousY());
 						}
 					}
 				}
+				
 			}
+			if(m_pEntVectorA->size() < 2)
+					break;
 		}
 	}
 }

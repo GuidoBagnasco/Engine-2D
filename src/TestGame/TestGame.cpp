@@ -36,6 +36,7 @@ bool TestGame::OnLoop(){
 	//t->Draw(m_renderer);
 	//b->Draw(m_renderer);
 	//c->Draw(m_renderer);
+	
 	s2->SetAnimation("Idle");
 
 	if(dInput->keyDown(Engine::Input::KEY_DOWN)){
@@ -54,7 +55,7 @@ bool TestGame::OnLoop(){
 		s2->SetPosition(s2->GetPositionX() -  fspeed * timer.GetDT(), s2->GetPositionY());
 		s2->SetAnimation("WalkingWest");
 	}
-
+	/*
 	if(s2->CheckCollision(*s) == Entity2D::CollisionResult::HorizontalCollision){
 		s2->SetPosition(s2->GetPreviousX(), s2->GetPositionY());
 	}
@@ -65,21 +66,21 @@ bool TestGame::OnLoop(){
 
 	if(s != NULL)
 		s->SetAnimation("WalkingSouth-west");
-
+	*/
 	s->SetPosition(s->GetPositionX() + dInput->mouseRelPosX(), s->GetPositionY() - dInput->mouseRelPosY());
-
+	/*
 	if(s->CheckCollision(*s2) == Entity2D::CollisionResult::HorizontalCollision){
 		s->SetPosition(s->GetPreviousX(), s->GetPositionY());
 	}
 	else if(s->CheckCollision(*s2) == Entity2D::CollisionResult::VerticalCollision){
 		s->SetPosition(s->GetPositionX(), s->GetPreviousY());
 	}
-
+	
 	for(unsigned int i = 0; i < m_pkEntities.size(); i++){
 		m_pkEntities[i]->Update(timer);
 		m_pkEntities[i]->Draw(m_renderer);
 	}
-	
+	*/
 
 	return true;
 }
