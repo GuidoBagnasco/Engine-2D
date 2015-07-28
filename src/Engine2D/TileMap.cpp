@@ -25,8 +25,8 @@ void TileMap::Draw(Renderer* pRenderer){
 	m_LayerInfoIter = m_LayerInfo.begin();
 
 	do{
-		for(int i = 0 ; i <  m_LayerInfoIter->second.size()-1 ; i++){
-			for (int j = 0; j < m_LayerInfoIter->second[i].size()-1; j++){
+		for(int i = 0 ; i <  m_LayerInfoIter->second.size(); i++){
+			for (int j = 0; j < m_LayerInfoIter->second[i].size(); j++){
 				if (m_LayerInfoIter->second[i][j] != 0){
 					itoa(m_LayerInfoIter->second[i][j], f_sTileName, 10);
 					GetTile(f_sTileName)->SetPosition((j * GetTile(f_sTileName)->GetScaleX())+ m_fPosX, (-i * GetTile(f_sTileName)->GetScaleY()) + m_fPosY);

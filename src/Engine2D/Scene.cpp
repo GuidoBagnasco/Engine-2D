@@ -92,7 +92,7 @@ void Scene::Draw(Renderer* m_renderer){
 		do{
 			m_ItEntity->second->Draw(m_renderer);
 			m_ItEntity++;
-		} while(m_ItEntity != m_entitiesMap.end());
+		}while(m_ItEntity != m_entitiesMap.end());
 	}
 }
 

@@ -9,7 +9,7 @@ TestGame::TestGame(HINSTANCE hInstance) : Game(hInstance){
 
 
 bool TestGame::OnStartUp(){
-	//t = new Triangle(SetVertex(-50, 0, 0, 152, 20, 71), SetVertex(50, 0, 0, 152, 20, 71), SetVertex(0, 50, 0, 152, 20, 71), 2, 4);
+	//t = new Triangle(SetVertex(-50, 0, -1, 152, 20, 71), SetVertex(50, 0, 0, 152, 20, 71), SetVertex(0, 50, 0, 152, 20, 71), 2, 4);
 
 	//b = new Box(SetVertex(-50, -150, 0, 23, 17, 71), SetVertex(0, -150, 0, 23, 17, 71), SetVertex(-10, -50, 0, 23, 17, 71), SetVertex(40, -50, 0, 23, 17, 71), 1, 2);
 
@@ -25,7 +25,7 @@ bool TestGame::OnStartUp(){
 	s2 = ((Engine::Sprite*)mainScene->GetEntity("character2"));
 
 	mainScene->GetTileMap("Map")->SetMapScale(850,850);
-	mainScene->GetTileMap("Map")->SetMapPosition(-350,350);
+	mainScene->GetTileMap("Map")->SetMapPosition(-400,350);
 	return true;
 }
 
@@ -34,53 +34,73 @@ static float fspeed = 0.20f;
 
 bool TestGame::OnLoop(){
 	//t->Draw(m_renderer);
-	//b->Draw(m_renderer);
+	//b->Draw(m_renderer);					// Show
 	//c->Draw(m_renderer);
 	
-	s2->SetAnimation("Idle");
+	if(s2 != NULL){
+		s2->SetAnimation("Idle");
 
-	if(dInput->keyDown(Engine::Input::KEY_DOWN)){
-		s2->SetPosition(s2->GetPositionX(), s2->GetPositionY() -  fspeed * timer.GetDT());
-		s2->SetAnimation("WalkingSouth");
-	}
-	else if(dInput->keyDown(Engine::Input::KEY_UP)){
-		s2->SetPosition(s2->GetPositionX(), s2->GetPositionY() +  fspeed * timer.GetDT());
-		s2->SetAnimation("WalkingNorth");
-	}
-	else if(dInput->keyDown(Engine::Input::KEY_RIGHT)){
-		s2->SetPosition(s2->GetPositionX()  +  fspeed * timer.GetDT(), s2->GetPositionY());
-		s2->SetAnimation("WalkingEast");
-	}
-	else if(dInput->keyDown(Engine::Input::KEY_LEFT)){
-		s2->SetPosition(s2->GetPositionX() -  fspeed * timer.GetDT(), s2->GetPositionY());
-		s2->SetAnimation("WalkingWest");
-	}
-	/*
-	if(s2->CheckCollision(*s) == Entity2D::CollisionResult::HorizontalCollision){
-		s2->SetPosition(s2->GetPreviousX(), s2->GetPositionY());
-	}
-	else if(s2->CheckCollision(*s) == Entity2D::CollisionResult::VerticalCollision){
-		s2->SetPosition(s2->GetPositionX(), s2->GetPreviousY());
-	}
-
-
-	if(s != NULL)
-		s->SetAnimation("WalkingSouth-west");
-	*/
-	s->SetPosition(s->GetPositionX() + dInput->mouseRelPosX(), s->GetPositionY() - dInput->mouseRelPosY());
-	/*
-	if(s->CheckCollision(*s2) == Entity2D::CollisionResult::HorizontalCollision){
-		s->SetPosition(s->GetPreviousX(), s->GetPositionY());
-	}
-	else if(s->CheckCollision(*s2) == Entity2D::CollisionResult::VerticalCollision){
-		s->SetPosition(s->GetPositionX(), s->GetPreviousY());
+		if(dInput->keyDown(Engine::Input::KEY_DOWN)){
+			s2->SetPosition(s2->GetPositionX(), s2->GetPositionY() -  fspeed * timer.GetDT());
+			s2->SetAnimation("WalkingS");
+		}
+		else if(dInput->keyDown(Engine::Input::KEY_UP)){
+			s2->SetPosition(s2->GetPositionX(), s2->GetPositionY() +  fspeed * timer.GetDT());
+			s2->SetAnimation("WalkingN");
+		}
+		else if(dInput->keyDown(Engine::Input::KEY_RIGHT)){
+			s2->SetPosition(s2->GetPositionX()  +  fspeed * timer.GetDT(), s2->GetPositionY());
+			s2->SetAnimation("WalkingE");
+		}
+		else if(dInput->keyDown(Engine::Input::KEY_LEFT)){
+			s2->SetPosition(s2->GetPositionX() -  fspeed * timer.GetDT(), s2->GetPositionY());
+			s2->SetAnimation("WalkingW");
+		}
 	}
 	
-	for(unsigned int i = 0; i < m_pkEntities.size(); i++){
-		m_pkEntities[i]->Update(timer);
-		m_pkEntities[i]->Draw(m_renderer);
+
+	if(s != NULL){
+
+		if(dInput->mouseDown(Input::MB_1)){
+			s->SetAnimation("WalkingNE");
+			s->SetPosition(s->GetPositionX() + dInput->mouseRelPosX(), s->GetPositionY() - dInput->mouseRelPosY());
+		}
+		else{
+			s->SetAnimation("Idle");
+		}
+		/*
+		if(dInput->mouseDown(Input::MB_1)){
+			if(dInput->mouseRelPosX() > mouseX){
+				if(dInput->mouseRelPosY() > mouseY){
+					// North-west
+					s->SetAnimation("WalkingNW");
+				}
+				else{
+					// South-west
+					s->SetAnimation("WalkingSW");
+				}
+			}
+			else{
+				if(dInput->mouseRelPosY() > mouseY){
+					// North-east
+					//s->SetAnimation("WalkingNE");
+					s->SetAnimation("WalkingN");
+				}
+				else{
+					// South-east
+					//s->SetAnimation("WalkingSE");
+					s->SetAnimation("WalkingE");
+				}
+			}
+			mouseX = dInput->mouseRelPosX();
+			mouseY = dInput->mouseRelPosY();
+			s->SetPosition(s->GetPositionX() + dInput->mouseRelPosX(), s->GetPositionY() - dInput->mouseRelPosY());
+		}
+		else{
+			s->SetAnimation("Idle");
+		}
+		*/
 	}
-	*/
 
 	return true;
 }

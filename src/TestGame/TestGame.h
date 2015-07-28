@@ -17,9 +17,10 @@ private:
 	Triangle* t;
 	Box* b;
 	Circle* c;
-	Sprite* s;
+	
 	Sprite* s2;
 	Importer* importer;
+	float mouseX, mouseY;
 
 protected:
 	bool OnStartUp();
@@ -28,7 +29,7 @@ protected:
 
 public:
 	TestGame(HINSTANCE hInstance);
-
+	Sprite* s;
 
 };
 

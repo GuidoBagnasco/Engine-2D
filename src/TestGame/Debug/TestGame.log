@@ -1,4 +1,4 @@
-﻿Build started 2015/07/26 09:33:32 p.m..
+﻿Build started 2015/07/27 08:22:33 p.m..
      1>Project "C:\Users\Guido\Documents\GitHub\Engine-2D\src\TestGame\TestGame.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\Guido\Documents\GitHub\Engine-2D\\src\Engine2D\includes" /I"C:\Users\Guido\Documents\GitHub\Engine-2D\res" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TestGame.cpp
@@ -12,4 +12,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.96
+Time Elapsed 00:00:03.09

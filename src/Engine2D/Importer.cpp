@@ -106,6 +106,7 @@ void Importer::ImportQuad(Scene& pkScene,tinyxml2::XMLElement* element){
 		int r = quad->IntAttribute("R");
 		int g = quad->IntAttribute("G");
 		int b = quad->IntAttribute("B");
+		std::string layer = quad->Attribute("LAYER");
 
 		ent_quad->SetName(name);
 		ent_quad->SetPosition(posX, posY);
