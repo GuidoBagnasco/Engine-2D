@@ -41,6 +41,15 @@ void Importer::LoadAnimation(std::vector<Animation>** list_animations, tinyxml2:
 	}
 }
 
+
+int Importer::ColorConverter(int hexValue){
+  int r = ((hexValue >> 16) & 0xFF) / 255.0;  // Extract the RR byte
+  int g = ((hexValue >> 8) & 0xFF) / 255.0;   // Extract the GG byte
+  int b = ((hexValue) & 0xFF) / 255.0;        // Extract the BB byte
+
+  return Engine_COLOR_RGB(r, g, b); 
+}
+
 void Importer::ImportSprite(Scene& pkScene, tinyxml2::XMLElement* element){
 	tinyxml2::XMLElement *sprite = element->FirstChildElement("SPRITE");
 	tinyxml2::XMLElement *instance = element->FirstChildElement("INSTANCE");
@@ -216,7 +225,8 @@ void Importer::ImportTileMap(Scene& mScene, tinyxml2::XMLElement* root){
 		int tilesX;
 		int tilesY;
 		int spacing = 2;
-		int margin;
+		int margin = 0;
+		int keycode = 0;
 		XMLNode TileData;
 
 		std::string f_TextureName;
@@ -227,15 +237,28 @@ void Importer::ImportTileMap(Scene& mScene, tinyxml2::XMLElement* root){
 		std::string path = map->Attribute("path");
 
 		TileMap * f_tmMap = new TileMap(mapName);	//MapName
-		XMLNode f_XMLMapNode = XMLNode::openFileHelper(path.c_str(), "map");
 
+		XMLNode f_XMLMapNode = XMLNode::openFileHelper(path.c_str(), "map");
+		XMLNode f = XMLNode::openFileHelper(path.c_str());
+		XMLNode f_XMLMapNode = f.guessCharEncoding();
+		//XMLNode f_XMLMapNode = f.getChildNode("map");
+		
+		
 		width = atoi(f_XMLMapNode.getAttribute("width"));
 		height = atoi(f_XMLMapNode.getAttribute("height"));
 		tilewidth = atoi(f_XMLMapNode.getAttribute("tilewidth"));
 		tileheight = atoi(f_XMLMapNode.getAttribute("tileheight"));
 		
 		TileData = f_XMLMapNode.getChildNode("tileset");
-		margin = atoi(TileData.getAttribute("margin"));
+
+		if(TileData.isAttributeSet("spacing")){
+			spacing = atoi(TileData.getAttribute("spacing"));
+		}
+
+		if(TileData.isAttributeSet("margin")){
+			margin = atoi(TileData.getAttribute("margin"));
+		}
+
 		tilesX = atoi(TileData.getAttribute("tilesX"));
 		tilesY = atoi(TileData.getAttribute("tilesY"));
 		TileData = TileData.getChildNode("image");
@@ -244,9 +267,13 @@ void Importer::ImportTileMap(Scene& mScene, tinyxml2::XMLElement* root){
 
 		textWidth = atoi(TileData.getAttribute("width"));
 		textHeight = atoi(TileData.getAttribute("height"));
-		//textWidth = 512;
-		//textHeight = 512;
-		Texture* texture = LoadTexture(f_TexturePath, Engine_COLOR_RGB( atoi( TileData.getAttribute("r") ), atoi( TileData.getAttribute("g") ), atoi( TileData.getAttribute("b") ) ) );
+
+		if(TileData.isAttributeSet("trans")){
+			keycode = ColorConverter(atoi(TileData.getAttribute("trans")));
+		}
+
+		Texture* texture = LoadTexture(f_TexturePath, keycode);
+		
 		int CountLayers = f_XMLMapNode.nChildNode("layer");	// layers
 
 		for(int l = 0; l<CountLayers; l++) {
@@ -257,10 +284,10 @@ void Importer::ImportTileMap(Scene& mScene, tinyxml2::XMLElement* root){
 			Data = Data.getChildNode("data");
 
 			for(int i = 0, t = 0; i<height; i++) {
-				std::vector<int> fila;
+				std::vector<int> v_row;
 				for(int j = 0; j<width; j++, t++) {
 					XMLNode tile = Data.getChildNode("tile", t);
-					fila.push_back(atoi(tile.getAttribute("gid")));
+					v_row.push_back(atoi(tile.getAttribute("gid")));
 					if(f_tmMap->TileExists(tile.getAttribute("gid")) == false) {
 						int col, row;
 						f_tmMap->GetColsRows(atoi(tile.getAttribute("gid")) - 1, tilesX, &col, &row);
@@ -272,7 +299,7 @@ void Importer::ImportTileMap(Scene& mScene, tinyxml2::XMLElement* root){
 						f_tmMap->AddTile(newTile->GetName(), newTile);
 					}
 				}
-				Layer.push_back(fila);
+				Layer.push_back(v_row);
 			}
 			f_tmMap->AddLayer(LayerName, Layer);
 			f_tmMap->SetColsRows(width, height);

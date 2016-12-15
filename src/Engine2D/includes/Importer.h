@@ -28,6 +28,7 @@ namespace Engine{
 		Renderer* pk_Renderer;
 		tinyxml2::XMLDocument doc;
 		tinyxml2::XMLElement *element;
+		int ColorConverter(int hexValue);
 		Texture* LoadTexture(std::string fileName, int keycode);
 		void LoadAnimation(std::vector<Animation> **animations, tinyxml2::XMLElement* elements);
 	public:

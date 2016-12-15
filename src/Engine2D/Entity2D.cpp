@@ -1,6 +1,7 @@
 #define NOMINMAX
 #include "Entity2D.h"
 #include "Renderer.h"
+#include <algorithm>
 using namespace Engine;
 
 

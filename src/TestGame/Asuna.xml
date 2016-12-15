@@ -80,6 +80,6 @@
 	<QUAD Name="quad" POS_X="0" POS_Y="0" ROTATION="0" SCALE_X="100" SCALE_Y="200" R="35" G="236" B="254" LAYER="Quad"/>
 	-->
 	<!-- 35 236 254-->
-	<TILEMAP name="Map" path="Map.xml" />
+	<TILEMAP name="Map" path="Tile2.xml" />
 </SHEET>
 	
