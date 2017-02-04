@@ -1,0 +1,159 @@
+<SCENE>
+  <!-- <INSTANCE sprite="Link" name="player2" posX="-50" posY="-50" rotation="0" scaleX="100" scaleY="100" layer="l1" /> -->
+  <!-- <QUAD name="floor" posX="90" posY="-50" rotation="45" scaleX="30" scaleY="30" r="255" g="0" b="0" layer="l2" /> -->
+  <SPRITE name="Compass" texture="Compass.png" r="0" g="0" b="0">
+		<ANIMATION name="Idle" length="1000" width="128" height="128">
+			<FRAME posX = "0"  posY = "0"  width = "128"  height = "128" />
+		</ANIMATION>
+  </SPRITE>
+  
+  <SPRITE name="Cursor" texture="Cursor.png" r="0" g="0" b="0">
+		<ANIMATION name="Idle" length="1000" width="64" height="64">
+			<FRAME posX = "0"  posY = "0"  width = "64"  height = "64" />
+		</ANIMATION>
+  </SPRITE>
+
+  <SPRITE name="Asuna" texture="Asuna.png" r="104" g="144" b="168">
+		<ANIMATION name="Idle" length="1000" width="1024" height="1024">
+			<FRAME posX = "0"  posY = "0"  width = "26"  height = "31" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingS" length="370" width="1024" height="1024">
+			<FRAME posX = "0"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "34"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "70"  posY = "0"  width = "26"  height = "31" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingN" length="370" width="1024" height="1024">
+			<FRAME posX = "105"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "140"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "174"  posY = "0"  width = "26"  height = "31" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingW" length="800" width="1024" height="1024">
+			<FRAME posX = "207"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "237"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "267"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "297"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "327"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "357"  posY = "0"  width = "26"  height = "31" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingE" length="800" width="1024" height="1024">
+			<FRAME posX = "395"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "425"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "455"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "485"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "515"  posY = "0"  width = "26"  height = "31" />
+			<FRAME posX = "545"  posY = "0"  width = "26"  height = "31" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingSW" length="800" width="1024" height="1024">
+			<FRAME posX = "0"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "34"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "70"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "105"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "140"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "175"  posY = "45"  width = "26"  height = "31" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingNW" length="800" width="1024" height="1024">
+			<FRAME posX = "207"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "237"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "267"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "297"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "327"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "357"  posY = "45"  width = "26"  height = "31" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingSE" length="800" width="1024" height="1024">
+			<FRAME posX = "582"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "615"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "651"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "687"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "720"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "756"  posY = "45"  width = "26"  height = "31" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingNE" length="800" width="1024" height="1024">
+			<FRAME posX = "395"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "425"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "455"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "485"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "515"  posY = "45"  width = "26"  height = "31" />
+			<FRAME posX = "545"  posY = "45"  width = "26"  height = "31" />
+		</ANIMATION>
+	</SPRITE>
+	
+	<SPRITE name="Kris" texture="Kris.png" r="255" g="255" b="255">
+		<ANIMATION name="Idle" length="1000" width="512" height="512">
+			<FRAME posX = "413"  posY = "370"  width = "26"  height = "26" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingS" length="370" width="512" height="512">
+			<FRAME posX = "383"  posY = "370"  width = "26"  height = "26" />
+			<FRAME posX = "413"  posY = "370"  width = "26"  height = "26" />
+			<FRAME posX = "442"  posY = "370"  width = "26"  height = "26" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingN" length="370" width="512" height="512">
+			<FRAME posX = "383"  posY = "428"  width = "26"  height = "26" />
+			<FRAME posX = "413"  posY = "428"  width = "26"  height = "26" />
+			<FRAME posX = "441"  posY = "428"  width = "26"  height = "26" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingW" length="800" width="512" height="512">
+			<FRAME posX = "376"  posY = "398"  width = "26"  height = "26" />
+			<FRAME posX = "398"  posY = "398"  width = "26"  height = "26" />
+			<FRAME posX = "421"  posY = "398"  width = "26"  height = "26" />
+			<FRAME posX = "443"  posY = "398"  width = "26"  height = "26" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingE" length="800" width="512" height="512">
+			<FRAME posX = "373"  posY = "459"  width = "26"  height = "26" />
+			<FRAME posX = "398"  posY = "459"  width = "26"  height = "26" />
+			<FRAME posX = "424"  posY = "459"  width = "26"  height = "26" />
+			<FRAME posX = "451"  posY = "459"  width = "26"  height = "26" />
+		</ANIMATION>
+	</SPRITE>
+	
+	<SPRITE name="Elf" texture="Elves.png" r="120" g="195" b="128">
+		<ANIMATION name="Idle" length="1000" width="512" height="512">
+			<FRAME posX = "224"  posY = "128"  width = "32"  height = "32" />
+		</ANIMATION>
+		
+		<ANIMATION name="WalkingS" length="370" width="512" height="512">
+			<FRAME posX = "192"  posY = "128"  width = "32"  height = "32" />
+			<FRAME posX = "224"  posY = "128"  width = "32"  height = "32" />
+			<FRAME posX = "256"  posY = "128"  width = "32"  height = "32" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingN" length="370" width="512" height="512">
+			<FRAME posX = "192"  posY = "224"  width = "32"  height = "32" />
+			<FRAME posX = "224"  posY = "224"  width = "32"  height = "32" />
+			<FRAME posX = "256"  posY = "224"  width = "32"  height = "32" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingW" length="400" width="512" height="512">
+			<FRAME posX = "192"  posY = "160"  width = "32"  height = "32" />
+			<FRAME posX = "224"  posY = "160"  width = "32"  height = "32" />
+			<FRAME posX = "256"  posY = "160"  width = "32"  height = "32" />
+		</ANIMATION>
+
+		<ANIMATION name="WalkingE" length="400" width="512" height="512">
+			<FRAME posX = "192"  posY = "192"  width = "32"  height = "32" />
+			<FRAME posX = "224"  posY = "192"  width = "32"  height = "32" />
+			<FRAME posX = "256"  posY = "192"  width = "32"  height = "32" />
+		</ANIMATION>
+	</SPRITE>
+		
+  <INSTANCE sprite="Asuna" name="asuna" posX="-70" posY="100" rotation="0" scaleX="100" scaleY="100" layer="Character_A"/>
+  <INSTANCE sprite="Kris" name="kris" posX="200" posY="0" rotation="0" scaleX="100" scaleY="100" layer="Character_B"/>
+  <INSTANCE sprite="Elf" name="elf" posX="0" posY="0" rotation="0" scaleX="100" scaleY="100" layer="Character_C"/>
+  <INSTANCE sprite="Compass" name="compass" posX="-270" posY="-200" rotation="0" scaleX="50" scaleY="50" layer="HUD" />
+  <INSTANCE sprite="Cursor" name="cursor" posX="0" posY="0" rotation="0" scaleX="50" scaleY="50" layer="HUD" />
+  
+  <TILEMAP Name="TileMap">
+    <TILES Path="Pokemon2.tmx"/>
+  </TILEMAP>
+</SCENE>
