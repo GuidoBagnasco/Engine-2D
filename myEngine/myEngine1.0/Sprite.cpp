@@ -1,8 +1,11 @@
+#define NOMINMAX
+
 #include "Sprite.h"
 #include "Renderer.h"
 #include "animation.h"
 #include "timer\Timer.h"
 #include <d3dx9.h>
+#include <limits>
 using namespace engine;
 
 
@@ -11,7 +14,8 @@ Entity(),
 //m_kTexture(NoTexture),
 m_tTexture(NoTexture),
 m_pkCurrentAnimation(NULL),
-_Vertex(new TextureVertex[4]){
+_Vertex(new TextureVertex[4]),
+m_uiPreviousFrame( std::numeric_limits<unsigned int>::max() ) {
 
 	_Vertex[0].x = -0.5f;	_Vertex[0].y =  0.5f;	_Vertex[0].z = 0.0f;
 	_Vertex[1].x =  0.5f;	_Vertex[1].y =  0.5f;	_Vertex[1].z = 0.0f;
@@ -45,7 +49,6 @@ void Sprite::setTextureCoords(float U1, float V1,
 
 
 void Sprite::AddAnimation(Animation* pkAnimation){
-
 	if (pkAnimation == NULL) return;
 
 	if (m_pkAnimationList.count(pkAnimation->getName()))

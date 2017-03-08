@@ -5,7 +5,6 @@
 #include "TileMap.h"
 #include "MyCustomScene.h"
 #include <iostream>
-//#include "Renderer.h"
 
 using namespace MyGame;
 
@@ -14,7 +13,7 @@ static float fspeed = 0.20f;
 static float fRot = 0.001f;
 
 
-bool Game::Init(engine::Renderer& r){
+bool Game::Init(engine::Renderer& r) {
 	r.SetBackgroundColor(300, 300, 300);
 
 	CreateScene("Scene1");
@@ -63,8 +62,8 @@ bool Game::Init(engine::Renderer& r){
 }
 
 
-void Game::Frame(engine::Renderer& r, engine::DirectInput& dInput, engine::Timer& timer){
-	if (asuna != NULL){
+void Game::Frame(engine::Renderer& r, engine::DirectInput& dInput, engine::Timer& timer) {
+	if (asuna != NULL) {
 		float fX = asuna->posX();
 		float fY = asuna->posY();
 
@@ -203,9 +202,10 @@ void Game::Frame(engine::Renderer& r, engine::DirectInput& dInput, engine::Timer
 }
 
 
-void Game::DeInit(){
+void Game::DeInit() {
 	if (asuna != NULL) delete asuna;
 	if (kris != NULL) delete kris;
+	if (elf != NULL) delete elf;
 	if (wheel != NULL) delete wheel;
 	if (cursor != NULL) delete cursor;
 }

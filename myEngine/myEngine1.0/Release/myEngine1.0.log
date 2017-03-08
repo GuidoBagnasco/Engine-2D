@@ -1,158 +1,198 @@
-﻿  Scene.cpp
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(39): warning C4251: 'engine::Scene::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(40): warning C4251: 'engine::Scene::m_mapaEntity': class 'std::map<std::string,engine::Entity *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+﻿  Importer.cpp
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Importer.h(45): warning C4251: 'engine::Importer::m_mTextureMap': class 'std::map<std::string,engine::Texture,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Importer'
           with
           [
               _Kty=std::string,
-              _Ty=engine::Entity *
-          ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(40): note: see declaration of 'std::map<std::string,engine::Entity *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Entity *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(41): warning C4251: 'engine::Scene::m_mIteratorEntity': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Entity *
-          ]
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Entity *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(42): warning C4251: 'engine::Scene::m_mTileMaps': class 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::TileMap *
-          ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(42): note: see declaration of 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::TileMap *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(43): warning C4251: 'engine::Scene::m_mTileMapsIter': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::TileMap *
-          ]
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::TileMap *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(48): warning C4251: 'engine::Scene::m_pClsGroups': class 'std::map<std::string,engine::Scene::Entity2DVector *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(46): note: see declaration of 'std::map<std::string,engine::Scene::Entity2DVector *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(49): warning C4251: 'engine::Scene::m_pClsGroupsIter': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(53): warning C4251: 'engine::Scene::m_pClsGroupsIterA': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Scene.h(54): warning C4251: 'engine::Scene::m_pClsGroupsIterB': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
-          with
-          [
-              _Kty=std::string,
-              _Ty=engine::Scene::Entity2DVector *
-          ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Renderer.h(39): warning C4251: 'engine::Renderer::m_vTexture': class 'std::vector<engine::Texture,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'engine::Renderer'
-          with
-          [
               _Ty=engine::Texture
           ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Renderer.h(39): note: see declaration of 'std::vector<engine::Texture,std::allocator<_Ty>>'
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Importer.h(45): note: see declaration of 'std::map<std::string,engine::Texture,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
           with
           [
+              _Kty=std::string,
               _Ty=engine::Texture
           ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Entity.h(52): warning C4251: 'engine::Entity::m_sColGroup': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Entity'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Importer.h(46): warning C4251: 'engine::Importer::m_mTilemaps': class 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Importer'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Importer.h(46): note: see declaration of 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(39): warning C4251: 'engine::Scene::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Entity.h(53): warning C4251: 'engine::Entity::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Entity'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(40): warning C4251: 'engine::Scene::m_mapaEntity': class 'std::map<std::string,engine::Entity *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Entity *
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(40): note: see declaration of 'std::map<std::string,engine::Entity *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Entity *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(41): warning C4251: 'engine::Scene::m_mIteratorEntity': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Entity *
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Entity *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(42): warning C4251: 'engine::Scene::m_mTileMaps': class 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Importer.h(46): note: see declaration of 'std::map<std::string,engine::TileMap *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(43): warning C4251: 'engine::Scene::m_mTileMapsIter': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::TileMap *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(48): warning C4251: 'engine::Scene::m_pClsGroups': class 'std::map<std::string,engine::Scene::Entity2DVector *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(46): note: see declaration of 'std::map<std::string,engine::Scene::Entity2DVector *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(49): warning C4251: 'engine::Scene::m_pClsGroupsIter': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(53): warning C4251: 'engine::Scene::m_pClsGroupsIterA': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Scene.h(54): warning C4251: 'engine::Scene::m_pClsGroupsIterB': class 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::Scene'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xtree(652): note: see declaration of 'std::_Tree_iterator<std::_Tree_val<std::_Tree_simple_types<std::pair<const _Kty,_Ty>>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=engine::Scene::Entity2DVector *
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Entity.h(52): warning C4251: 'engine::Entity::m_sColGroup': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Entity'
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Sprite.h(20): warning C4251: 'engine::Sprite::m_pkAnimationList': class 'std::map<std::string,engine::Animation *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Sprite'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Entity.h(53): warning C4251: 'engine::Entity::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Entity'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Sprite.h(20): warning C4251: 'engine::Sprite::m_pkAnimationList': class 'std::map<std::string,engine::Animation *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::Sprite'
           with
           [
               _Kty=std::string,
               _Ty=engine::Animation *
           ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\Sprite.h(20): note: see declaration of 'std::map<std::string,engine::Animation *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Sprite.h(20): note: see declaration of 'std::map<std::string,engine::Animation *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
           with
           [
               _Kty=std::string,
               _Ty=engine::Animation *
           ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\TileMap.h(17): warning C4251: 'engine::TileMap::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\animation.h(26): warning C4251: 'engine::Animation::m_akFrames': class 'std::vector<engine::Animation::Frame,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'engine::Animation'
+          with
+          [
+              _Ty=engine::Animation::Frame
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\animation.h(20): note: see declaration of 'std::vector<engine::Animation::Frame,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=engine::Animation::Frame
+          ]
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\animation.h(36): warning C4251: 'engine::Animation::_Name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::Animation'
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\TileMap.h(23): warning C4251: 'engine::TileMap::m_vLayers': class 'std::vector<std::vector<engine::Tile *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\TileMap.h(17): warning C4251: 'engine::TileMap::m_sName': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2628): note: see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\TileMap.h(23): warning C4251: 'engine::TileMap::m_vLayers': class 'std::vector<std::vector<engine::Tile *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
           with
           [
               _Ty=engine::Tile *
           ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\TileMap.h(23): note: see declaration of 'std::vector<std::vector<engine::Tile *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\TileMap.h(23): note: see declaration of 'std::vector<std::vector<engine::Tile *,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>>'
           with
           [
               _Ty=engine::Tile *
           ]
-c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\TileMap.h(24): warning C4251: 'engine::TileMap::m_mCollisionLayers': class 'std::map<std::string,int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\TileMap.h(24): warning C4251: 'engine::TileMap::m_mCollisionLayers': class 'std::map<std::string,int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' needs to have dll-interface to be used by clients of class 'engine::TileMap'
           with
           [
               _Kty=std::string,
               _Ty=int
           ]
-  c:\users\guido\desktop\gráficos\root\trunk\myengine\myengine1.0\TileMap.h(24): note: see declaration of 'std::map<std::string,int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\TileMap.h(24): note: see declaration of 'std::map<std::string,int,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
           with
           [
               _Kty=std::string,
               _Ty=int
           ]
-Scene.cpp(179): warning C4018: '<': signed/unsigned mismatch
-Scene.cpp(184): warning C4018: '<': signed/unsigned mismatch
-     Creating library C:\Users\Guido\Desktop\Gráficos\root\trunk\myEngine\Release\myEngine1.0.lib and object C:\Users\Guido\Desktop\Gráficos\root\trunk\myEngine\Release\myEngine1.0.exp
+c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Renderer.h(39): warning C4251: 'engine::Renderer::m_vTexture': class 'std::vector<engine::Texture,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'engine::Renderer'
+          with
+          [
+              _Ty=engine::Texture
+          ]
+  c:\users\guido\documents\github\engine-2d\myengine\myengine1.0\Renderer.h(39): note: see declaration of 'std::vector<engine::Texture,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=engine::Texture
+          ]
+Importer.cpp(88): warning C4018: '<': signed/unsigned mismatch
+Importer.cpp(320): warning C4018: '>=': signed/unsigned mismatch
+Importer.cpp(357): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+Importer.cpp(391): warning C4018: '>=': signed/unsigned mismatch
+Importer.cpp(432): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(2254): note: see declaration of 'sscanf'
+     Creating library C:\Users\Guido\Documents\GitHub\Engine-2D\myEngine\Release\myEngine1.0.lib and object C:\Users\Guido\Documents\GitHub\Engine-2D\myEngine\Release\myEngine1.0.exp
   Generating code
-  3 of 2693 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+  0 of 2694 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  myEngine1.0.vcxproj -> C:\Users\Guido\Desktop\Gráficos\root\trunk\myEngine\Release\myEngine1.0.dll
+  myEngine1.0.vcxproj -> C:\Users\Guido\Documents\GitHub\Engine-2D\myEngine\Release\myEngine1.0.dll
